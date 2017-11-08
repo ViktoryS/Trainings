@@ -14,32 +14,32 @@ public class Controller {
 
     public void proccessUser(){
         Scanner in = new Scanner(System.in);
-        model.setRandomValue(rand(GlobalConstants.MIN_BUNDLE, GlobalConstants.MAX_BUNDLE));
-        view.printMessage(view.WELCOME_MSG);
+        model.generateRandomValue();
+        view.welcomeMsg();
         int res = -1;
         while(res != model.getRandomValue()){
             changeBariers(res = inputIntWithScanner(in));
-            model.addResultValue(model.getMinBarrier() + view.TO_MSG + model.getMaxBarrier());
+            model.addResultValue(model.getMinBarrier() + view.SPASE_MSG
+                    + view.TWO_DOTS_MSG + view.SPASE_MSG + model.getMaxBarrier());
         }
-        view.printMessage(view.CONGRADULATION_MSG);
+        view.congradulationMsg();
         view.printResultArray(model.getResultValues());
     }
 
     public int inputIntWithScanner(Scanner in){
         int res = -1;
-        view.printMessage(view.INPUT_FROM_MSG +
-                model.getMinBarrier() + view.TO_MSG + model.getMaxBarrier() + view.TWO_DOTS_MSG);
+        view.inputValueWithBarriers(model);
 
         while( true ) {
             while (!in.hasNextInt()) {
-                view.printMessage(view.WRONG_INPUT_MSG
-                        + view.INPUT_INT_MSG);
+                view.wrongInputMsg();
+                view.inputIntMsg();
                 in.next();
             }
             if ((res = in.nextInt()) <= model.getMinBarrier() ||
                     res >= model.getMaxBarrier()) {
-                view.printMessage(view.WRONG_INPUT_MSG
-                        + view.INPUT_INT_MSG);
+                view.wrongInputMsg();
+                view.inputIntMsg();
                 continue ;
             }
             break;
@@ -53,9 +53,5 @@ public class Controller {
         }else{
             model.setMaxBarrier(value);
         }
-    }
-
-    public int rand(int min, int max){
-        return (int)Math.round(Math.random() * (max-1) + min);
     }
 }

@@ -11,16 +11,16 @@ public class Model {
     public Model(){
         resultValues = new String[20];
         resultValuesCount = 0;
-        minBarrier = 0;
-        maxBarrier = 100;
+        minBarrier = GlobalConstants.MIN_BARRIER;
+        maxBarrier = GlobalConstants.MAX_BARRIER;
     }
 
     public int getRandomValue() {
         return randomValue;
     }
 
-    public void setRandomValue(int randomValue) {
-        this.randomValue = randomValue;
+    public void generateRandomValue() {
+        this.randomValue = Utils.rand(this.minBarrier, this.maxBarrier);
     }
 
     public int getMinBarrier() {

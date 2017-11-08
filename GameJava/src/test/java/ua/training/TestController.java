@@ -19,8 +19,8 @@ public class TestController {
     public void testRand(){
         int res;
         for (int i = 0; i < 10000; i++) {
-            res = controller.rand(GlobalConstants.MIN_BUNDLE, GlobalConstants.MAX_BUNDLE);
-            assertTrue(res >= GlobalConstants.MIN_BUNDLE && res <= GlobalConstants.MAX_BUNDLE);
+            res = Utils.rand(GlobalConstants.MIN_BARRIER, GlobalConstants.MAX_BARRIER);
+            assertTrue(res >= GlobalConstants.MIN_BARRIER && res <= GlobalConstants.MAX_BARRIER);
         }
     }
 
