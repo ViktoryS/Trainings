@@ -19,7 +19,7 @@ public class NoteBuilder {
     }
 
     public NoteBuilder setNickame(String nickname){
-        note.setNickname(nickname);
+        note.setNickName(nickname);
         return this;
     }
 

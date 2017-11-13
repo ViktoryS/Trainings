@@ -21,6 +21,16 @@ public class View {
     public static final String EMAIL_MSG = "email.msg";
     public static final String THANKS_FOR_NEW_NOTE = "thanks.for.note.msg";
     public static final String INPUT_WRONG_DATA = "input.wrong.data";
+    public static final String MENU_INPUT = "input.menu";
+    public static final String BYE_MSG = "exit.msg";
+
+    public void printObject(Object obj){
+        System.out.println(obj);
+    }
+
+    public void exit(){
+        System.out.println(bundle.getString(BYE_MSG));
+    }
 
     public void welcome(){
         System.out.println(bundle.getString(WELCOME));
@@ -30,29 +40,32 @@ public class View {
         System.out.println(bundle.getString(ADD_NOTE));
     }
 
-    public void inputName(){
-        System.out.println(bundle.getString(INPUT_MSG) + SPACE
-                + NAME_MSG + COMMA + SPACE + bundle.getString(PLEASE_MSG));
+    public void menu(){
+        System.out.println(bundle.getString(MENU_INPUT));
     }
 
+    public void inputName(){
+        System.out.println(bundle.getString(INPUT_MSG) + SPACE
+                + bundle.getString(NAME_MSG) + COMMA + SPACE + bundle.getString(PLEASE_MSG));
+    }
     public void inputNickName(){
         System.out.println(bundle.getString(INPUT_MSG) + SPACE
-                + NICKNAME_MSG + COMMA + SPACE + bundle.getString(PLEASE_MSG));
+                + bundle.getString(NICKNAME_MSG) + COMMA + SPACE + bundle.getString(PLEASE_MSG));
     }
 
     public void inputMobilePhone(){
         System.out.println(bundle.getString(INPUT_MSG) + SPACE
-                + MOBILE_PHONE_MSG + COMMA + SPACE + bundle.getString(PLEASE_MSG));
+                + bundle.getString(MOBILE_PHONE_MSG) + COMMA + SPACE + bundle.getString(PLEASE_MSG));
     }
 
     public void inputHomePhone(){
         System.out.println(bundle.getString(INPUT_MSG) + SPACE
-                + HOME_PHONE_MSG + COMMA + SPACE + bundle.getString(PLEASE_MSG));
+                + bundle.getString(HOME_PHONE_MSG) + COMMA + SPACE + bundle.getString(PLEASE_MSG));
     }
 
     public void inputEmail(){
         System.out.println(bundle.getString(INPUT_MSG) + SPACE
-                + EMAIL_MSG + COMMA + SPACE + bundle.getString(PLEASE_MSG));
+                + bundle.getString(EMAIL_MSG) + COMMA + SPACE + bundle.getString(PLEASE_MSG));
     }
 
     public void inputWrong(){

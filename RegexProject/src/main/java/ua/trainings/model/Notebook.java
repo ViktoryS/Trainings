@@ -1,23 +1,24 @@
 package ua.trainings.model;
 
-import java.util.ArrayList;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Notebook {
-    private ArrayList<Note> notes;
+    private Set<Note> notes;
 
     public Notebook(){
-        notes = new ArrayList();
+        notes = new TreeSet<>();
     }
 
     public void addNote(Note note){
         notes.add(note);
     }
 
-    public ArrayList<Note> getNotes() {
+    public Set<Note> getNotes() {
         return notes;
     }
 
-    public void setNotes(ArrayList<Note> notes) {
+    public void setNotes(Set<Note> notes) {
         this.notes = notes;
     }
 
@@ -36,11 +37,11 @@ public class Notebook {
             this.name = name;
         }
 
-        public String getNickname() {
+        public String getNickName() {
             return nickname;
         }
 
-        public void setNickname(String nickname) {
+        public void setNickName(String nickname) {
             this.nickname = nickname;
         }
 
