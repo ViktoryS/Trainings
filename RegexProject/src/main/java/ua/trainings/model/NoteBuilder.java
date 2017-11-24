@@ -9,31 +9,31 @@ public class NoteBuilder {
     }
 
     public NoteBuilder createNote(){
-        notebook.addNote(note = notebook.new Note());
+        note = notebook.new Note();
         return this;
     }
 
-    public NoteBuilder setName(String name){
+    public NoteBuilder buildName(String name){
         note.setName(name);
         return this;
     }
 
-    public NoteBuilder setNickame(String nickname){
+    public NoteBuilder buildNickame(String nickname){
         note.setNickName(nickname);
         return this;
     }
 
-    public NoteBuilder setMobilePhone(String mobilePhone){
+    public NoteBuilder buildMobilePhone(String mobilePhone){
         note.setMobilePhone(mobilePhone);
         return this;
     }
 
-    public NoteBuilder setHomePhone(String homePhone){
+    public NoteBuilder buildHomePhone(String homePhone){
         note.setHomePhone(homePhone);
         return this;
     }
 
-    public NoteBuilder setEmail(String email){
+    public NoteBuilder buildEmail(String email){
         note.setEmail(email);
         return this;
     }

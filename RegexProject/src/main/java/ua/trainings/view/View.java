@@ -44,28 +44,9 @@ public class View {
         System.out.println(bundle.getString(MENU_INPUT));
     }
 
-    public void inputName(){
+    public void inputValue(String value){
         System.out.println(bundle.getString(INPUT_MSG) + SPACE
-                + bundle.getString(NAME_MSG) + COMMA + SPACE + bundle.getString(PLEASE_MSG));
-    }
-    public void inputNickName(){
-        System.out.println(bundle.getString(INPUT_MSG) + SPACE
-                + bundle.getString(NICKNAME_MSG) + COMMA + SPACE + bundle.getString(PLEASE_MSG));
-    }
-
-    public void inputMobilePhone(){
-        System.out.println(bundle.getString(INPUT_MSG) + SPACE
-                + bundle.getString(MOBILE_PHONE_MSG) + COMMA + SPACE + bundle.getString(PLEASE_MSG));
-    }
-
-    public void inputHomePhone(){
-        System.out.println(bundle.getString(INPUT_MSG) + SPACE
-                + bundle.getString(HOME_PHONE_MSG) + COMMA + SPACE + bundle.getString(PLEASE_MSG));
-    }
-
-    public void inputEmail(){
-        System.out.println(bundle.getString(INPUT_MSG) + SPACE
-                + bundle.getString(EMAIL_MSG) + COMMA + SPACE + bundle.getString(PLEASE_MSG));
+                + bundle.getString(value) + COMMA + SPACE + bundle.getString(PLEASE_MSG));
     }
 
     public void inputWrong(){
